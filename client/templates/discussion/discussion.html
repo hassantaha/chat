@@ -1,0 +1,24 @@
+<template name="discussion">
+  
+    {{#if currentUser}}
+
+      <form class="new-discussion">
+        <input type="text" name="text" placeholder="Type to add new Discussions" class="focus"/><br><br>
+
+        <p>Add users to disscussion!</p><br>
+        {{#each users}}
+
+        <input type="checkbox" id="test1" class="css-checkbox" name="util">{{username}}<br>
+      
+        {{/each}}
+
+        <input name="button" type="submit"  id="button" value="Add" />
+      </form>
+      <br> 
+    {{#each discussions}}
+    <strong>{{username}}</strong> - <a class="disc" href="/discussions/{{_id}}">{{text}}</a><br>
+    {{/each}}
+
+    {{/if}}
+  
+</template>

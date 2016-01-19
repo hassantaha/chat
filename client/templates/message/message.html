@@ -1,0 +1,15 @@
+<template name="message">
+    <h2>discussions: {{text}}</h2>
+    {{#if currentUser}}
+      <form class="new-msg">
+        <input type="text" name="text" placeholder="Type to send msg" />
+      </form>
+    {{/if}}
+
+    {{#each messages}}
+    <li>
+    <button class="delete">&times;</button> 
+    <span class="text"><strong>{{authorName}}</strong> - {{content}}</span>
+    </li><br>
+    {{/each}}
+</template>
