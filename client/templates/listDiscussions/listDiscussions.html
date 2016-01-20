@@ -1,0 +1,17 @@
+<template name="listDiscussions">
+  <div class="list-discussions">
+
+    {{#if currentUser}} 
+    {{#each listDiscussions}}
+    <div class="list">
+        <strong>{{username}}</strong> - <a class="disc" href="/discussions/{{_id}}">{{text}}</a><br>
+    </div>
+    
+    {{/each}}
+
+    {{/if}}
+  </div>
+  
+    
+  
+</template>

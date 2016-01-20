@@ -1,0 +1,48 @@
+.Main {
+	width: 100vw;
+	height:100%;
+	padding: 0px;
+	margin: 0px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgb(239,69,39);
+	z-index: 500;
+	font-size: 3.5vw;
+}
+
+.Main .Main header {
+	display: inline-block;
+	width: 40%;
+	text-align: left;
+	color: white;
+    font-family: robotoMedium;
+    font-size: 4vw;
+    height: 12.5vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin-left: 1vw;
+}
+
+.Main .body {
+	background-color: white;
+	height: 80%;
+	overflow:auto;
+}
+
+.Main footer{
+	position:absolute;
+   	bottom:0;
+   	width:100%;
+	font-size: 4vw;
+    height: 12.5vw;
+
+}
+
+.Main hr{
+	color: #000000;
+	background-color: #000000;
+
+}

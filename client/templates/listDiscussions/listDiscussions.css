@@ -1,0 +1,12 @@
+.list-discussions {
+	background-color: white;
+	overflow:auto;
+}
+
+.list-discussions .list {
+	width: 100vw;
+	height: 10vw;
+	float: left;
+	border:1px groove black;
+}
+

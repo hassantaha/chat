@@ -1,21 +1,26 @@
 <template name="Main">
-  <div class="container">
+  <div class="Main">
     <header>
 
-      <h1> Chat </h1>
+      <div class=head> Chat </div>
       {{> loginButtons}}
 
     </header>
 
-    {{> yield}}
-    {{> navigation}}
+    {{> home}}
+    
+    <div class="body">
+
+        {{> yield}}
+
+    </div>
+    
 
     <footer>
       <hr />
-      <p>Copyright &copy; Hassan Taha, 2014-2015.</p>
+      <p>Copyright &copy; Hassan Taha, 2015-2016.</p>
     </footer>
     
-
     </div>
 </template>
 

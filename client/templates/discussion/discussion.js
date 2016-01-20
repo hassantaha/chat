@@ -38,7 +38,8 @@ Template.discussion.events({
       // Penser à gérer la sélection et la déselection.
       var listUsers = template.listUsers.get();
       if ( event.target.checked ) {
-        listUsers.push(this._id);
+        
+      listUsers.push(this._id);         
       }
       listUsers.push(Meteor.userId());
       template.listUsers.set(listUsers);

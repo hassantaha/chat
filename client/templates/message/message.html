@@ -1,15 +1,28 @@
 <template name="message">
-    <h2>discussions: {{text}}</h2>
-    {{#if currentUser}}
-      <form class="new-msg">
-        <input type="text" name="text" placeholder="Type to send msg" />
-      </form>
-    {{/if}}
+    <div class="message">
 
-    {{#each messages}}
-    <li>
-    <button class="delete">&times;</button> 
-    <span class="text"><strong>{{authorName}}</strong> - {{content}}</span>
-    </li><br>
-    {{/each}}
+        <h2>discussions: {{text}}</h2>
+        
+
+        <div class="msg">
+            {{#each messages}}
+                <div class="message bubble-left">
+                    <label class="message-user">{{authorName}}</label>
+                    <label class="message-timestamp">{{date}}</label>
+                    <p>{{content}}</p>
+                </div>
+        
+            {{/each}}
+        </div>
+
+        {{#if currentUser}}
+            <form class="new-msg">
+                <div class="message-south">
+                    <input type="text" name="text" placeholder="Type to send msg" />
+                </div>
+            </form>
+        {{/if}}
+
+    </div>
+    
 </template>

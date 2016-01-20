@@ -1,11 +1,12 @@
 <template name="discussion">
-  
+  <div class="discussion">
+
     {{#if currentUser}}
 
       <form class="new-discussion">
         <input type="text" name="text" placeholder="Type to add new Discussions" class="focus"/><br><br>
 
-        <p>Add users to disscussion!</p><br>
+        <p>Add users to disscussion.</p><br>
         {{#each users}}
 
         <input type="checkbox" id="test1" class="css-checkbox" name="util">{{username}}<br>
@@ -20,5 +21,8 @@
     {{/each}}
 
     {{/if}}
+  </div>
+  
+    
   
 </template>
