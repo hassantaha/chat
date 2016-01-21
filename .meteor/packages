@@ -21,3 +21,4 @@ accounts-password
 iron:router
 random
 reactive-var
+momentjs:moment

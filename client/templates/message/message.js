@@ -30,6 +30,9 @@ Template.message.helpers({
       if( a.date < b.date ) return 1;
       return 0;
     } );
+  },
+  formattedDate : function() {
+    return moment(this.date).calendar();
   }
 });
 

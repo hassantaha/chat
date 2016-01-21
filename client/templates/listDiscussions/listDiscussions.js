@@ -1,4 +1,14 @@
 Template.listDiscussions.events({
+	"click .image": function (event, template) {
+      
+      Router.go('discussion');
+  	},
+
+  	"click .list": function (event, template) {
+      
+      Router.go('/discussions/'+this._id);
+      	
+  	},
   
 });
 

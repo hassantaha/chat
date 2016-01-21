@@ -32,15 +32,6 @@
 	overflow:auto;
 }
 
-.Main footer{
-	position:absolute;
-   	bottom:0;
-   	width:100%;
-	font-size: 4vw;
-    height: 12.5vw;
-
-}
-
 .Main hr{
 	color: #000000;
 	background-color: #000000;

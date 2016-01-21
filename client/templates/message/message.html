@@ -6,9 +6,9 @@
 
         <div class="msg">
             {{#each messages}}
-                <div class="message bubble-left">
-                    <label class="message-user">{{authorName}}</label>
-                    <label class="message-timestamp">{{date}}</label>
+                <div class="bubble-left">
+                    <span><b>{{authorName}}</b>:</span>
+                    <span class="time">{{formattedDate}}.</span>
                     <p>{{content}}</p>
                 </div>
         
