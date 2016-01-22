@@ -1,0 +1,28 @@
+<template name="search">
+  <div class="search">
+
+    {{> searchBox }}
+    {{> searchResult}}
+
+  </div>
+  
+    
+  
+</template>
+
+
+<template name="searchBox">
+    <div class="search-box">
+        <input type="text" id="search" placeholder="search discussions here" />
+    </div>
+</template>
+
+<template name="searchResult">
+  <div class="search-result">
+    {{#each discussions}}
+    <div class="list">
+        <strong>{{username}}</strong> - <a class="disc" href="/discussions/{{_id}}">{{text}}</a><br>
+    </div>
+    {{/each}}
+  </div>
+</template>
