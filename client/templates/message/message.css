@@ -11,6 +11,15 @@
 
 }
 
+.message .msg .bubble-left .vu{
+  color: blue;
+
+}
+.message .msg .bubble-left .nonVu{
+  color: black;
+
+}
+
 .message .msg .bubble-left {
 	border:1px groove black;
 	height: 15vw;
