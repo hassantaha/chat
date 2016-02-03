@@ -26,43 +26,29 @@ Template.message.helpers({
   },
   messages : function() {
 
-    return this.messages.sort( function(a,b) {
+  var contributors = this.contributors;
+    
+  var messages = this.messages.sort( function(a,b) {
       if( a.date > b.date ) return -1;
       if( a.date < b.date ) return 1;
       return 0;
     } );
+
+  for( let message of messages ) {
+    message.isSeen = false;
+    for( let contributor of contributors ) {
+      if( contributor.lastSeen > message.date ) {
+        message.isSeen = true;
+        break;
+      }
+    }
+  }
+
+  return messages
   },
   formattedDate : function() {
     return moment(this.date).calendar();
   },
-
-  time : function(){
-
-    var messages = this.messages;
-
-    var contributors = this.contributors;
-
-    var maxDate = -1, msg = "nonVu";
-
-    for( var i = 0; i < messages.length; i++ ) {
-      if( maxDate < messages[i].date ) {
-        maxDate = messages[i].date;
-    
-      }
-    }
-
-    for( var i = 0; i < contributors.length; i++ ) {
-      if( maxDate < contributors[i].lastSeen ) {
-        if(contributors[i].id === Meteor.userId()){
-          msg="nonVu";
-        }else{
-          msg="vu";
-        }
-      }
-    }
-
-    return msg;
-  }
 });
 
 

@@ -19,17 +19,7 @@ Template.discussion.onDestroyed( function(){
   Chat.createDiss = null;
   this.listUsers = null;
 });
-  
 
-Template.body.helpers({
-  
-  
-});
-
-Template.body.events({
-  
-
-});
 
 Template.discussion.events({
   "change .css-checkbox": function (event, template) {
@@ -39,8 +29,17 @@ Template.discussion.events({
       var listUsers = template.listUsers.get();
       if ( event.target.checked ) {
         
-      listUsers.push(this._id);         
+        listUsers.push(this._id);         
+      }else {
+
+        for (var i=listUsers.length-1; i>=0; i--) {
+          if (listUsers[i] === this._id) {
+            listUsers.splice(i, 1);
+          }
+        }
+        
       }
+      
       listUsers.push(Meteor.userId());
       template.listUsers.set(listUsers);
 

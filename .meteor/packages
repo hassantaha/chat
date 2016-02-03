@@ -22,3 +22,6 @@ iron:router
 random
 reactive-var
 momentjs:moment
+meteorhacks:search-source
+hammer:hammer@=2.0.4_1
+chriswessels:hammer

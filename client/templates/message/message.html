@@ -8,7 +8,7 @@
             {{#each messages}}
                 <div class="bubble-left">
                     <span><b>{{authorName}}</b>:</span>
-                    <span class="{{time}}">{{formattedDate}}.</span>
+                    <span class="{{#if isSeen}}vu{{else}}nonVu{{/if}}">{{formattedDate}}.</span>
                     <p>{{content}}</p>
                 </div>
         

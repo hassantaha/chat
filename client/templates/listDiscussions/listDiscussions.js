@@ -7,11 +7,13 @@ Template.listDiscussions.events({
   	"click .list": function (event, template) {
       
       Router.go('/discussions/'+this._id);
+      Meteor.call("editLastSeen", this._id, Meteor.userId());
       	
   	},
-  
-});
 
+
+    
+});
 
 Template.listDiscussions.helpers({
   isOwner: function () {
@@ -22,6 +24,12 @@ Template.listDiscussions.helpers({
       return Discussions.find({ contributors: { $elemMatch: { id: Meteor.userId() } } }, {sort: {createdAt: -1}});
     
   },
+  map1: {
+    'swipeleft .list-discussions': function (event, template) {
+      
+      Router.go('discussion');
+    }
+  }
 });
 
 
