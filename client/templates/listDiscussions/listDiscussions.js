@@ -24,6 +24,16 @@ Template.listDiscussions.helpers({
       return Discussions.find({ contributors: { $elemMatch: { id: Meteor.userId() } } }, {sort: {createdAt: -1}});
     
   },
+  configureHammer: function () {
+    return function (hammer, templateInstance) {
+      var swipeleft = new Hammer.Swipe({
+        event: 'swipeleft', /* prefix for custom swipe events, e.g. 2fingerswipeleft, 2fingerswiperight */
+        velocity: 1
+      });
+      hammer.add(swipeleft);
+      return hammer;
+    }
+  },
   map1: {
     'swipeleft .list-discussions': function (event, template) {
       

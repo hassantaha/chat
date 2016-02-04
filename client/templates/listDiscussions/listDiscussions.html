@@ -1,5 +1,6 @@
 <template name="listDiscussions">
-{{#HammerTouchArea gestureMap=map1}}
+{{#AnimateWithVelocity}}
+<div data-animate data-properties="translateY" data-duration="1000" data-from-values="500" data-to-values="0">
   <div class="list-discussions">
 
     {{#if currentUser}} 
@@ -17,8 +18,10 @@
     </div>
     
   </div>
+</div>
+{{/AnimateWithVelocity}}
 
-{{/HammerTouchArea}}
+
 
  
 </template>
