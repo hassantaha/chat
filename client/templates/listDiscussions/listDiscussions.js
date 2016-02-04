@@ -8,6 +8,15 @@ Template.listDiscussions.events({
       
       Router.go('/discussions/'+this._id);
       Meteor.call("editLastSeen", this._id, Meteor.userId());
+      
+      $('.list-discussions').velocity({
+        translateY: [500,0],
+        opacity : [0.1]
+
+      },{
+        duration: 1000,
+        display:'none'
+      });
       	
   	},
 

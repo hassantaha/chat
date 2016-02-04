@@ -26,3 +26,4 @@ meteorhacks:search-source
 hammer:hammer@=2.0.4_1
 chriswessels:hammer
 frozeman:animation-helper-velocity
+velocityjs:velocityjs
